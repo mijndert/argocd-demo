@@ -20,6 +20,12 @@ And install ArgoCD into the namespace.
 kubectl -n argocd apply -f ./argocd/install.yaml
 ```
 
+Instead of using the install yaml from this repository, you can also deploy the latest one from ArgoCD.
+
+```
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```
+
 ## Port forward the dashboard
 
 Because this is a demo I'm not gonna bother with a proper load balancer or ingress controller - I'm just going to temporarily port forward the dashboard.
