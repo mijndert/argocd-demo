@@ -49,7 +49,7 @@ kubectl get pods -n argocd
 Now we can deploy the example deployment I created, it will deploy Nginx.
 
 ```
-kubectl apply -n argocd -f ./argocd/nginx.yaml
+kubectl apply -f ./argocd/nginx.yaml
 ```
 
 Any changes that you push to the Git repository will be automatically deployed because ArgoCD constantly watches for changes. ArgoCD will also self-heal all parts of the deployment if it detects anything is out of sync.
