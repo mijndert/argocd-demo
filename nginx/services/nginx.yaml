@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: nginx-service
 spec:
+  ports:
+  - name: "80"
+    port: 8888
+    targetPort: 80
   selector:
     app: nginx
-  ports:
-    - protocol: TCP
-      port: 4000
-      targetPort: 80
+  type: NodePort
